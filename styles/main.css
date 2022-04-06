@@ -42,3 +42,38 @@ h1 {
     margin: auto;
     padding-top: 25%;
 }
+
+.playingScreens {
+    display: flex;
+    justify-content: center;
+    align-itmes: center;
+    flex-direction: column;
+}
+
+.questionsBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100px;
+    width: 700px;
+    border: solid;
+    border-radius: 15px;
+    border-color: white;
+    background-color: silver;
+    margin-top: 15%;
+}
+
+.optionA {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 250px;
+    width: 300px;
+    border: solid;
+    border-radius: 15px;
+    border-color: white;
+    background-color: silver;
+    margin-top: 15%;
+}

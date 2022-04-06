@@ -11,7 +11,7 @@ let $codingCategory = $('.codingCategory')
 let $sportsCategory = $('.sportsCategory')
 let $musicCategory = $('.musicCategory')
 
-let $questions = ${'.questions'}
+let $questions = ${'.questions')
 let $codingquestions = $('#codingquestions')
 let $sportsquestions = $('#sportsquestions')
 let $musicquestions = $('#musicquestions')
