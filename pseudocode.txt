@@ -5,7 +5,7 @@ There will be a navigation bar at the top with a dropdown menu displaying the tr
 When a player chooses a topic from the navigation bar, they will be pushed to that categories playing screen. 
     - use jQuery.click
     - fadeIn()
-    -fadeOut()
+    - fadeOut()
     - hide()
     - show()
 
