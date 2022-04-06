@@ -1,0 +1,35 @@
+The home screen will have the title of the game centered in the middle of the page.
+
+There will be a navigation bar at the top with a dropdown menu displaying the trivia topics.
+
+When a player chooses a topic from the navigation bar, they will be pushed to that categories playing screen. 
+    - use jQuery.click
+    - fadeIn()
+    -fadeOut()
+    - hide()
+    - show()
+
+From that point, they will be answering a certain amount of questions.
+- Add a time clock, countdown.
+    - 30 seconds per question.
+    - 5 minutes per 10 questions.
+        using setInterval(), clearInterval()
+        using setTimeout(), clearTimeOut()
+
+
+If a player gets a question wrong, the answer bubble will turn red and they will be prompted with a Strike 1 message.
+    - Using jQuery.css('background-color', 'red')
+
+If a player answers correctly, the answer bubble will turn green and the next question will appear.
+    - Using jQuery.css('background-color', 'green')
+    - fadeIn(), fadeOut()
+    - show(), hide()
+
+The player has 3 strikes (3 wrong answers) until he loses and has to restart the game.
+
+
+
+
+
+
+
