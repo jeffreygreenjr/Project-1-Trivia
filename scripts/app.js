@@ -52,15 +52,28 @@ let game = true;
 // $optionC.text(triviaQuestions.options[2])
 // $optionD.text(triviaQuestions.options[3])
 
+
+
 let codingTriviaArr = [
     {
         question: "What is the best coding bootcamp in the world?",
         optionA: "Full Stack Academy",
         optionB: "Northwestern University",
         optionC: "General Assembly",
-        optionD: "Coding Dojo"
-    }
+        optionD: "Coding Dojo",
+        correctAnswer: "General Assembly",
+    },
+    // {
+    //     question: "When did our cohort start?",
+    //     optionA: "January 1st",
+    //     optionB: "March 21st",
+    //     optionC: "April 1st",
+    //     optionD: "April 15th",
+    //     correctAnswer: "March 21st",
+    // }
 ]
+
+loadQuestion()
 
 function loadQuestion() {
     for (let i = 0; i < codingTriviaArr.length; i++) {
@@ -73,7 +86,78 @@ function loadQuestion() {
     } 
 }
 
-loadQuestion()
+
+
+// incorrectAnswer()
+
+// function incorrectAnswer() {
+//     if ($optionA.click) {
+//         $optionA.css('background-color', 'red');
+//     }
+// }
+
+$optionA.click(function(e) {
+    // $optionA.css('background-color', 'red');
+    // console.log(e.target.innerText)
+    if (e.target.innerText === codingTriviaArr[0].correctAnswer) {
+        $optionA.css('background-color', 'green');
+        // console.log(e.target.innerText)
+    } else {
+        $optionA.css('background-color', 'red')
+    }
+})
+
+$optionB.click(function(e) {
+    // $optionA.css('background-color', 'red');
+    // console.log(e.target.innerText)
+    if (e.target.innerText === codingTriviaArr[0].correctAnswer) {
+        $optionB.css('background-color', 'green');
+        // console.log(e.target.innerText)
+    } else {
+        $optionB.css('background-color', 'red')
+    }
+})
+
+$optionC.click(function(e) {
+    // $optionA.css('background-color', 'red');
+    // console.log(e.target.innerText)
+    if (e.target.innerText === codingTriviaArr[0].correctAnswer) {
+        $optionC.css('background-color', 'green');
+        // console.log(e.target.innerText)
+    } else {
+        $optionC.css('background-color', 'red')
+        
+    }
+})
+
+$optionD.click(function(e) {
+    // $optionA.css('background-color', 'red');
+    // console.log(e.target.innerText)
+    if (e.target.innerText === codingTriviaArr[0].correctAnswer) {
+        $optionD.css('background-color', 'green');
+        // console.log(e.target.innerText)
+    } else {
+        $optionD.css('background-color', 'red')
+    }
+})
+
+// function answerChoice() {
+//     if ($optionA.click && (e.target.innerText == correctAnswer) {
+//         $optionA.css('background-color', 'red');
+//     }
+// }
+
+// if ()
+
+// loadQuestion()
+
+
+
+// function answeredCorrectly() {
+//     if 
+// }
+
+
 
 
     // console.log($questionsBox.text(triviaQuestions.question))
