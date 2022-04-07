@@ -50,13 +50,46 @@ h1 {
     flex-direction: column;
 }
 
+.questionContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .questionsBox {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    width: 800px;
+    border: solid;
+    border-radius: 15px;
+    border-color: white;
+    background-color: silver;
+    margin-top: 7%;
+}
+
+.answersContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+}
+
+.optionsColumn1 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100px;
-    width: 700px;
+    padding-right: 75px;
+}
+
+.optionA {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 250px;
+    width: 300px;
     border: solid;
     border-radius: 15px;
     border-color: white;
@@ -64,11 +97,44 @@ h1 {
     margin-top: 15%;
 }
 
-.optionA {
+.optionB {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 250px;
+    width: 300px;
+    border: solid;
+    border-radius: 15px;
+    border-color: white;
+    background-color: silver;
+    margin-top: 15%;
+}
+
+.optionsColumn2 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.optionC {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 250px;
+    width: 300px;
+    border: solid;
+    border-radius: 15px;
+    border-color: white;
+    background-color: silver;
+    margin-top: 15%;
+}
+
+.optionD {
+    display: flex;
+    justify-content: center;
+    text-align: center;
     height: 250px;
     width: 300px;
     border: solid;
