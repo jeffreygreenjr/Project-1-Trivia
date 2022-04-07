@@ -59,7 +59,9 @@ h1 {
 .questionsBox {
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
+    font-size: 50px;
     height: 200px;
     width: 800px;
     border: solid;
@@ -87,7 +89,9 @@ h1 {
 .optionA {
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
+    font-size: 30px;
     height: 250px;
     width: 300px;
     border: solid;
@@ -95,13 +99,23 @@ h1 {
     border-color: white;
     background-color: silver;
     margin-top: 15%;
+    opacity: .85;
 }
+
+/* .optionA:hover {
+    opacity: 1;
+}
+
+.optionA:active {
+    transform: translateY(4px);
+} */
 
 .optionB {
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    flex-direction: column;
+    font-size: 30px;
     height: 250px;
     width: 300px;
     border: solid;
@@ -109,7 +123,16 @@ h1 {
     border-color: white;
     background-color: silver;
     margin-top: 15%;
+    opacity: .85;
 }
+
+/* .optionB:hover {
+    opacity: 1;
+}
+
+.optionB:active {
+    transform: translateY(4px);
+} */
 
 .optionsColumn2 {
     display: flex;
@@ -121,7 +144,9 @@ h1 {
 .optionC {
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
+    font-size: 30px;
     height: 250px;
     width: 300px;
     border: solid;
@@ -129,12 +154,23 @@ h1 {
     border-color: white;
     background-color: silver;
     margin-top: 15%;
+    opacity: .85;
 }
+
+/* .optionC:hover {
+    opacity: 1;
+}
+
+.optionC:active {
+    transform: translateY(4px);
+} */
 
 .optionD {
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
+    font-size: 30px;
     height: 250px;
     width: 300px;
     border: solid;
@@ -142,4 +178,13 @@ h1 {
     border-color: white;
     background-color: silver;
     margin-top: 15%;
+    opacity: .85;
 }
+
+/* .optionD:hover {
+    opacity: 1;
+}
+
+.optionD:active {
+    transform: translateY(4px);
+} */
