@@ -102,13 +102,13 @@ h1 {
     opacity: .85;
 }
 
-/* .optionA:hover {
+.optionA:hover {
     opacity: 1;
 }
 
 .optionA:active {
     transform: translateY(4px);
-} */
+}
 
 .optionB {
     display: flex;
@@ -126,13 +126,13 @@ h1 {
     opacity: .85;
 }
 
-/* .optionB:hover {
+.optionB:hover {
     opacity: 1;
 }
 
 .optionB:active {
     transform: translateY(4px);
-} */
+}
 
 .optionsColumn2 {
     display: flex;
@@ -157,13 +157,13 @@ h1 {
     opacity: .85;
 }
 
-/* .optionC:hover {
+.optionC:hover {
     opacity: 1;
 }
 
 .optionC:active {
     transform: translateY(4px);
-} */
+}
 
 .optionD {
     display: flex;
@@ -181,10 +181,10 @@ h1 {
     opacity: .85;
 }
 
-/* .optionD:hover {
+.optionD:hover {
     opacity: 1;
 }
 
 .optionD:active {
     transform: translateY(4px);
-} */
+}
