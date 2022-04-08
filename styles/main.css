@@ -76,6 +76,8 @@ h1 {
     justify-content: center;
     align-items: center;
     align-content: space-between;
+    font-size: 250px;
+    /* color: red; */
 }
 
 .optionsColumn1 {
@@ -92,8 +94,8 @@ h1 {
     align-items: center;
     text-align: center;
     font-size: 30px;
-    height: 250px;
-    width: 300px;
+    height: 200px;
+    width: 250px;
     border: solid;
     border-radius: 15px;
     border-color: white;
@@ -116,8 +118,8 @@ h1 {
     align-items: center;
     text-align: center;
     font-size: 30px;
-    height: 250px;
-    width: 300px;
+    height: 200px;
+    width: 250px;
     border: solid;
     border-radius: 15px;
     border-color: white;
@@ -147,8 +149,8 @@ h1 {
     align-items: center;
     text-align: center;
     font-size: 30px;
-    height: 250px;
-    width: 300px;
+    height: 200px;
+    width: 250px;
     border: solid;
     border-radius: 15px;
     border-color: white;
@@ -171,8 +173,8 @@ h1 {
     align-items: center;
     text-align: center;
     font-size: 30px;
-    height: 250px;
-    width: 300px;
+    height: 200px;
+    width: 250px;
     border: solid;
     border-radius: 15px;
     border-color: white;
@@ -186,5 +188,37 @@ h1 {
 }
 
 .optionD:active {
+    transform: translateY(4px);
+}
+
+.nextContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.nextButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    height: 75px;
+    width: 100px;
+    border: solid;
+    border-radius: 15px;
+    border-color: white;
+    background-color: silver;
+    margin-top: 2%;
+    opacity: .85;
+}
+
+.nextButton:hover {
+    opacity: 1;
+}
+
+.nextButton:active {
     transform: translateY(4px);
 }
