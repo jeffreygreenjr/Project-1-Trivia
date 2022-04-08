@@ -107,19 +107,23 @@ $homeScreen.click(function() {
     $homeScreen.hide()
     $playingScreens.show()
     loadQuestion()
+    game = true;
 })
 
 function loadQuestion() {
     addContent()
         $optionA.click(function(e) {
             if (e.target.innerText === codingTriviaArr[i].correctAnswer) {
-                $optionA.css('background-color', 'green');
+                $optionA.css('background-color', 'greenyellow');
+                $optionA.css('box-shadow', '0 0 20px greenyellow, 0 0 30px greenyellow');
                 console.log("Correct")
             } else {
-                $optionA.css('background-color', 'red');
+                $optionA.css('background-color', 'crimson');
+                $optionA.css('box-shadow', '0 0 20px crimson, 0 0 30px crimson');
                 // $answersContainer.text("STRIKE")
                 // $answersContainer.css('color', 'red')
                 console.log("Incorrect")
+                game = false;
             }
             // removeContent()
             // addContent()
@@ -127,13 +131,16 @@ function loadQuestion() {
         })
         $optionB.click(function(e) {
             if (e.target.innerText === codingTriviaArr[i].correctAnswer) {
-                $optionB.css('background-color', 'green');
+                $optionB.css('background-color', 'greenyellow');
+                $optionB.css('box-shadow', '0 0 20px greenyellow, 0 0 30px greenyellow');
                 console.log("Correct")
             } else {
-                $optionB.css('background-color', 'red');
+                $optionB.css('background-color', 'crimson');
+                $optionB.css('box-shadow', '0 0 20px crimson, 0 0 30px crimson');
                 // $answersContainer.text("STRIKE");
                 // $answersContainer.css('color', 'red');
                 console.log("Incorrect")
+                game = false;
             }
             // removeContent()
             // addContent()
@@ -141,13 +148,16 @@ function loadQuestion() {
         })
         $optionC.click(function(e) {
             if (e.target.innerText === codingTriviaArr[i].correctAnswer) {
-                $optionC.css('background-color', 'green');
+                $optionC.css('background-color', 'greenyellow');
+                $optionC.css('box-shadow', '0 0 20px greenyellow, 0 0 30px greenyellow');
                 console.log("Correct")
             } else {
-                $optionC.css('background-color', 'red');
+                $optionC.css('background-color', 'crimson');
+                $optionC.css('box-shadow', '0 0 20px crimson, 0 0 30px crimson');
                 // $answersContainer.text("STRIKE");
                 // $answersContainer.css('color', 'red');
                 console.log("Incorrect")
+                game = false;
             }
             // removeContent()
             // addContent()
@@ -155,13 +165,16 @@ function loadQuestion() {
         })
         $optionD.click(function(e) {
             if (e.target.innerText === codingTriviaArr[i].correctAnswer) {
-                $optionD.css('background-color', 'green');
+                $optionD.css('background-color', 'greenyellow');
+                $optionD.css('box-shadow', '0 0 20px greenyellow, 0 0 30px greenyellow');
                 console.log("Correct")
             } else {
-                $optionD.css('background-color', 'red');
+                $optionD.css('background-color', 'crimson');
+                $optionD.css('box-shadow', '0 0 20px crimson, 0 0 30px crimson');
                 // $answersContainer.text("STRIKE");
                 // $answersContainer.css('color', 'red');
                 console.log("Incorrect")
+                game = false;
             }
         })
 }
@@ -175,6 +188,7 @@ $nextButton.click(function() {
         console.log(i)
         loadQuestion(i);
         removeAnswerStyling();
+        game = true;
     }
 })
 
@@ -200,10 +214,15 @@ function removeContent() {
 }
 
 function removeAnswerStyling() {
-    $optionA.css('background-color', 'silver');
-    $optionB.css('background-color', 'silver');
-    $optionC.css('background-color', 'silver');
-    $optionD.css('background-color', 'silver');
+    $optionA.css('background-color', 'plum');
+    $optionA.css('box-shadow', '0 0 20px plum, 0 0 30px plum');
+    $optionB.css('background-color', 'plum');
+    $optionB.css('box-shadow', '0 0 20px plum, 0 0 30px plum');
+    $optionC.css('background-color', 'plum');
+    $optionC.css('box-shadow', '0 0 20px plum, 0 0 30px plum');
+    $optionD.css('background-color', 'plum');
+    $optionD.css('box-shadow', '0 0 20px plum, 0 0 30px plum');
+
     // $answersContainer.text("STRIKE")
     // $answersContainer.css('color', 're')
 }
