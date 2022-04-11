@@ -146,6 +146,7 @@ $gameButton.click(function() {
     $playingScreens.show()
     triviaGame()
     $body.css('background-image', 'url()')
+    game = true;
 })
 
 function triviaGame() {
@@ -158,6 +159,7 @@ function triviaGame() {
                 score++
                 $scoreNum.text(score)
                 console.log(`Your score is ${score}`)
+                game = false;
             } else {
                 $optionA.css('background-color', 'crimson');
                 $optionA.css('box-shadow', '0 0 20px crimson, 0 0 30px crimson');
@@ -166,6 +168,7 @@ function triviaGame() {
                 strike++
                 $strikeNum.text(strike)
                 console.log(`Strike ${strike}`)
+                game = false;
             }
         })
         $optionB.click(function(e) {
@@ -176,6 +179,7 @@ function triviaGame() {
                 score++
                 $scoreNum.text(score)
                 console.log(`Your score is ${score}`)
+                game = false;
             } else {
                 $optionB.css('background-color', 'crimson');
                 $optionB.css('box-shadow', '0 0 20px crimson, 0 0 30px crimson');
@@ -184,6 +188,7 @@ function triviaGame() {
                 strike++
                 $strikeNum.text(strike)
                 console.log(`Strike ${strike}`)
+                game = false
             }
         })
         $optionC.click(function(e) {
@@ -194,6 +199,7 @@ function triviaGame() {
                 score++
                 $scoreNum.text(score)
                 console.log(`Your score is ${score}`)
+                // gameOver();
             } else {
                 $optionC.css('background-color', 'crimson');
                 $optionC.css('box-shadow', '0 0 20px crimson, 0 0 30px crimson');
@@ -227,8 +233,14 @@ function triviaGame() {
 
 // triviaGame()
 
+function gameOver() {
+    if (!game) {
+        return game = false
+    }
+}
+
 $nextButton.click(function() {
-    if (i < codingTriviaArr.length) {
+    if (i <= codingTriviaArr.length - 1) {
         // console.log(i)
         i++;
         // console.log(i)
@@ -236,6 +248,9 @@ $nextButton.click(function() {
         addContent();
         removeAnswerStyling();
         game = true;
+    }
+    else {
+        $answersContainer.text("THE END");
     }
 })
 
