@@ -2,6 +2,8 @@
 
 // Global Variables
 
+let $body = $('.body')
+
 let $homeScreen = $('.homeScreen')
 let $gameTitle = $('.gameTitle')
 
@@ -26,7 +28,17 @@ let $musicanswers = $('#musicanswers')
 
 let $wrongAnswer = $('.wrongAnswer')
 
+let $clock = $('.clock')
+let $scoreNum = $('.scoreNum')
+
 let game = true;
+let clock = 1000
+let score = 0
+let strike = 0
+
+
+
+
 
 
 // Array of objects that store questions, answer options, and correct answer
@@ -89,12 +101,36 @@ let codingTriviaArr = [
         correctAnswer: "Chicago Bulls",
     },
     {
-        question: "What is Howey's first name?",
-        optionA: "Michael",
-        optionB: "Julia",
-        optionC: "Jose",
-        optionD: "Jeffrey",
-        correctAnswer: "Michael",
+        question: "When was the first generation iPhone released?",
+        optionA: "1999",
+        optionB: "2001",
+        optionC: "2007",
+        optionD: "2009",
+        correctAnswer: "2007",
+    },
+    {
+        question: "When did Tiger Woods win his first Masters?",
+        optionA: "1993",
+        optionB: "1997",
+        optionC: "2001",
+        optionD: "2003",
+        correctAnswer: "1997",
+    },
+    {
+        question: "Who is the youngest player to win the MVP in the NBA?",
+        optionA: "Michael Jordan",
+        optionB: "Lebron James",
+        optionC: "Derrick Rose",
+        optionD: "Kobe Bryant",
+        correctAnswer: "Derrick Rose",
+    },
+    {
+        question: "What is the largest ski resort in the US?",
+        optionA: "Park City, UT",
+        optionB: "Vail, CO",
+        optionC: "Lake Tahoe, CA",
+        optionD: "Breckinridge, CO",
+        correctAnswer: "Park City, UT",
     },
 ]
 
@@ -105,92 +141,97 @@ console.log($playingScreens)
 
 $homeScreen.click(function() {
     $homeScreen.hide()
+    addContent()
     $playingScreens.show()
-    loadQuestion()
-    game = true;
+    triviaGame()
 })
 
-function loadQuestion() {
-    addContent()
+function triviaGame() {
+    
         $optionA.click(function(e) {
             if (e.target.innerText === codingTriviaArr[i].correctAnswer) {
                 $optionA.css('background-color', 'greenyellow');
                 $optionA.css('box-shadow', '0 0 20px greenyellow, 0 0 30px greenyellow');
-                console.log("Correct")
+                console.log("Correct");
+                score++
+                console.log(`Your score is ${score}`)
             } else {
                 $optionA.css('background-color', 'crimson');
                 $optionA.css('box-shadow', '0 0 20px crimson, 0 0 30px crimson');
-                // $answersContainer.text("STRIKE")
-                // $answersContainer.css('color', 'red')
-                console.log("Incorrect")
+                console.log("Incorrect");
                 game = false;
+                strike++
+                console.log(`Strike ${strike}`)
             }
-            // removeContent()
-            // addContent()
-            // i++
         })
         $optionB.click(function(e) {
             if (e.target.innerText === codingTriviaArr[i].correctAnswer) {
                 $optionB.css('background-color', 'greenyellow');
                 $optionB.css('box-shadow', '0 0 20px greenyellow, 0 0 30px greenyellow');
-                console.log("Correct")
+                console.log("Correct");
+                score++
+                console.log(`Your score is ${score}`)
             } else {
                 $optionB.css('background-color', 'crimson');
                 $optionB.css('box-shadow', '0 0 20px crimson, 0 0 30px crimson');
-                // $answersContainer.text("STRIKE");
-                // $answersContainer.css('color', 'red');
-                console.log("Incorrect")
+                console.log("Incorrect");
                 game = false;
+                strike++
+                console.log(`Strike ${strike}`)
             }
-            // removeContent()
-            // addContent()
-            // i++
         })
         $optionC.click(function(e) {
             if (e.target.innerText === codingTriviaArr[i].correctAnswer) {
                 $optionC.css('background-color', 'greenyellow');
                 $optionC.css('box-shadow', '0 0 20px greenyellow, 0 0 30px greenyellow');
-                console.log("Correct")
+                console.log("Correct");
+                score++
+                console.log(`Your score is ${score}`)
             } else {
                 $optionC.css('background-color', 'crimson');
                 $optionC.css('box-shadow', '0 0 20px crimson, 0 0 30px crimson');
-                // $answersContainer.text("STRIKE");
-                // $answersContainer.css('color', 'red');
-                console.log("Incorrect")
+                console.log("Incorrect");
                 game = false;
+                strike++
+                console.log(`Strike ${strike}`)
             }
-            // removeContent()
-            // addContent()
-            // i++
         })
         $optionD.click(function(e) {
             if (e.target.innerText === codingTriviaArr[i].correctAnswer) {
                 $optionD.css('background-color', 'greenyellow');
                 $optionD.css('box-shadow', '0 0 20px greenyellow, 0 0 30px greenyellow');
-                console.log("Correct")
+                console.log("Correct");
+                score++
+                console.log(`Your score is ${score}`)
             } else {
                 $optionD.css('background-color', 'crimson');
                 $optionD.css('box-shadow', '0 0 20px crimson, 0 0 30px crimson');
-                // $answersContainer.text("STRIKE");
-                // $answersContainer.css('color', 'red');
-                console.log("Incorrect")
+                console.log("Incorrect");
                 game = false;
+                strike++
+                console.log(`Strike ${strike}`)
             }
         })
 }
 
-loadQuestion()
+// triviaGame()
 
 $nextButton.click(function() {
     if (i < codingTriviaArr.length) {
-        console.log(i)
+        // console.log(i)
         i++;
-        console.log(i)
-        loadQuestion(i);
+        // console.log(i)
+        // triviaGame(i);
+        addContent();
         removeAnswerStyling();
         game = true;
     }
 })
+
+// When the trivia reaches the end question, create an else statement after the if conditional,
+// else if (i === codingTriviaArr.length) {
+//     THE END
+// }
 
 function addContent() {
     $answersContainer.css('color', 'darkslategrey');
@@ -201,17 +242,7 @@ function addContent() {
     $optionD.text(codingTriviaArr[i].optionD)
 }
 
-function removeContent() {
-    $questionsBox.text("")
-    $optionA.text("")
-    $optionB.text("")
-    $optionC.text("")
-    $optionD.text("")
-    $optionA.css('background-color', 'silver')
-    $optionB.css('background-color', 'silver')
-    $optionC.css('background-color', 'silver')
-    $optionD.css('background-color', 'silver')
-}
+
 
 function removeAnswerStyling() {
     $optionA.css('background-color', 'plum');
@@ -234,6 +265,75 @@ function removeAnswerStyling() {
 // Scrapped js
 
 // loadQuestion()
+
+// function loadQuestion() {
+//     addContent()
+//         $optionA.click(function(e) {
+//             if (e.target.innerText === codingTriviaArr[i].correctAnswer) {
+//                 $optionA.css('background-color', 'greenyellow');
+//                 $optionA.css('box-shadow', '0 0 20px greenyellow, 0 0 30px greenyellow');
+//                 console.log("Correct")
+//             } else {
+//                 $optionA.css('background-color', 'crimson');
+//                 $optionA.css('box-shadow', '0 0 20px crimson, 0 0 30px crimson');
+//                 // $answersContainer.text("STRIKE")
+//                 // $answersContainer.css('color', 'red')
+//                 console.log("Incorrect")
+//                 game = false;
+//             }
+//             // removeContent()
+//             // addContent()
+//             // i++
+//         })
+//         $optionB.click(function(e) {
+//             if (e.target.innerText === codingTriviaArr[i].correctAnswer) {
+//                 $optionB.css('background-color', 'greenyellow');
+//                 $optionB.css('box-shadow', '0 0 20px greenyellow, 0 0 30px greenyellow');
+//                 console.log("Correct")
+//             } else {
+//                 $optionB.css('background-color', 'crimson');
+//                 $optionB.css('box-shadow', '0 0 20px crimson, 0 0 30px crimson');
+//                 // $answersContainer.text("STRIKE");
+//                 // $answersContainer.css('color', 'red');
+//                 console.log("Incorrect")
+//                 game = false;
+//             }
+//             // removeContent()
+//             // addContent()
+//             // i++
+//         })
+//         $optionC.click(function(e) {
+//             if (e.target.innerText === codingTriviaArr[i].correctAnswer) {
+//                 $optionC.css('background-color', 'greenyellow');
+//                 $optionC.css('box-shadow', '0 0 20px greenyellow, 0 0 30px greenyellow');
+//                 console.log("Correct")
+//             } else {
+//                 $optionC.css('background-color', 'crimson');
+//                 $optionC.css('box-shadow', '0 0 20px crimson, 0 0 30px crimson');
+//                 // $answersContainer.text("STRIKE");
+//                 // $answersContainer.css('color', 'red');
+//                 console.log("Incorrect")
+//                 game = false;
+//             }
+//             // removeContent()
+//             // addContent()
+//             // i++
+//         })
+//         $optionD.click(function(e) {
+//             if (e.target.innerText === codingTriviaArr[i].correctAnswer) {
+//                 $optionD.css('background-color', 'greenyellow');
+//                 $optionD.css('box-shadow', '0 0 20px greenyellow, 0 0 30px greenyellow');
+//                 console.log("Correct")
+//             } else {
+//                 $optionD.css('background-color', 'crimson');
+//                 $optionD.css('box-shadow', '0 0 20px crimson, 0 0 30px crimson');
+//                 // $answersContainer.text("STRIKE");
+//                 // $answersContainer.css('color', 'red');
+//                 console.log("Incorrect")
+//                 game = false;
+//             }
+//         })
+// }
 
 // i++ after every click event, if & else
 
