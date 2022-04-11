@@ -5,7 +5,7 @@
 let $body = $('.body')
 
 let $homeScreen = $('.homeScreen')
-let $gameTitle = $('.gameTitle')
+let $gameButton = $('.gameButton')
 
 let $playingScreens = $('.playingScreens')
 
@@ -28,8 +28,9 @@ let $musicanswers = $('#musicanswers')
 
 let $wrongAnswer = $('.wrongAnswer')
 
-let $clock = $('.clock')
-let $scoreNum = $('.scoreNum')
+let $clock = $('#clock')
+let $scoreNum = $('#scoreNum')
+let $strikeNum = $('#strikeNum')
 
 let game = true;
 let clock = 1000
@@ -139,11 +140,12 @@ let i = 0
 $playingScreens.hide()
 console.log($playingScreens)
 
-$homeScreen.click(function() {
+$gameButton.click(function() {
     $homeScreen.hide()
     addContent()
     $playingScreens.show()
     triviaGame()
+    $body.css('background-image', 'url()')
 })
 
 function triviaGame() {
@@ -154,6 +156,7 @@ function triviaGame() {
                 $optionA.css('box-shadow', '0 0 20px greenyellow, 0 0 30px greenyellow');
                 console.log("Correct");
                 score++
+                $scoreNum.text(score)
                 console.log(`Your score is ${score}`)
             } else {
                 $optionA.css('background-color', 'crimson');
@@ -161,6 +164,7 @@ function triviaGame() {
                 console.log("Incorrect");
                 game = false;
                 strike++
+                $strikeNum.text(strike)
                 console.log(`Strike ${strike}`)
             }
         })
@@ -170,6 +174,7 @@ function triviaGame() {
                 $optionB.css('box-shadow', '0 0 20px greenyellow, 0 0 30px greenyellow');
                 console.log("Correct");
                 score++
+                $scoreNum.text(score)
                 console.log(`Your score is ${score}`)
             } else {
                 $optionB.css('background-color', 'crimson');
@@ -177,6 +182,7 @@ function triviaGame() {
                 console.log("Incorrect");
                 game = false;
                 strike++
+                $strikeNum.text(strike)
                 console.log(`Strike ${strike}`)
             }
         })
@@ -186,6 +192,7 @@ function triviaGame() {
                 $optionC.css('box-shadow', '0 0 20px greenyellow, 0 0 30px greenyellow');
                 console.log("Correct");
                 score++
+                $scoreNum.text(score)
                 console.log(`Your score is ${score}`)
             } else {
                 $optionC.css('background-color', 'crimson');
@@ -193,6 +200,7 @@ function triviaGame() {
                 console.log("Incorrect");
                 game = false;
                 strike++
+                $strikeNum.text(strike)
                 console.log(`Strike ${strike}`)
             }
         })
@@ -202,13 +210,16 @@ function triviaGame() {
                 $optionD.css('box-shadow', '0 0 20px greenyellow, 0 0 30px greenyellow');
                 console.log("Correct");
                 score++
+                $scoreNum.text(score)
                 console.log(`Your score is ${score}`)
+
             } else {
                 $optionD.css('background-color', 'crimson');
                 $optionD.css('box-shadow', '0 0 20px crimson, 0 0 30px crimson');
                 console.log("Incorrect");
                 game = false;
                 strike++
+                $strikeNum.text(strike)
                 console.log(`Strike ${strike}`)
             }
         })

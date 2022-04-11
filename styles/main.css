@@ -29,7 +29,7 @@ html {
   body {
     background-image: url('https://media1.giphy.com/media/q1hhYf1wo9ZOKPyoVw/giphy.gif?cid=ecf05e47rgflxkdtyf8dbw6ac2th95j9siwbp5b1yib9lg60&rid=giphy.gif&ct=g');
     background-color: black;
-    background-size: cover;
+    background-size: auto 100vh;
     background-repeat: no-repeat;
     background-position: center center;
     height: 100vh;
@@ -43,11 +43,11 @@ html {
     align-content: center;
   }
 
-  .gameTitle {
+  .gameButton {
     display: flex;
     padding: 1%;
-    margin-top: 40%;
-    margin-left: 13%;
+    margin-top: 700px;
+    margin-left: 150px;
     background-color: greenyellow; 
     border-radius: 75%;
     opacity: .50;
@@ -58,13 +58,13 @@ html {
     0 0 25px greenyellow;
 }
 
-.gameTitle:hover {
+.gameButton:hover {
         opacity: 1;
 }
 
-h1 {
+.startGame {
     color: whitesmoke;
-    font-size: 40px;
+    font-size: 35px;
     text-shadow:
     0 0 7px whitesmoke,
     0 0 10px whitesmoke;
@@ -96,7 +96,8 @@ h1 {
     background-color: aqua;
     border-color: aqua;
     color: whitesmoke;
-    margin-top: 7%;
+    margin-top: 6%;
+    margin-bottom: 3%;
     box-shadow: 
     0 0 20px aqua,
     0 0 30px aqua;
@@ -105,17 +106,14 @@ h1 {
 
 .scoreboardContainer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
 }
 
 .scoreboard {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: row;
-    
 }
 
 #timeContainer {
@@ -127,7 +125,7 @@ h1 {
     font-size: 25px;
     font-size: 25px;
     height: 100px;
-    width: 200px;
+    width: 150px;
     padding: 10px;
     border: solid;
     border-radius: 15px;
@@ -150,7 +148,7 @@ h1 {
     font-size: 25px;
     font-size: 25px;
     height: 100px;
-    width: 200px;
+    width: 150px;
     padding: 10px;
     border: solid;
     border-radius: 15px;
@@ -173,7 +171,7 @@ h1 {
     font-size: 25px;
     font-size: 25px;
     height: 100px;
-    width: 200px;
+    width: 150px;
     padding: 10px;
     border: solid;
     border-radius: 15px;
@@ -330,7 +328,7 @@ h1 {
     align-items: center;
     text-align: center;
     flex-direction: column;
-    margin-top: 1%
+    margin-top: 3%
 }
 
 .nextButton {
@@ -345,7 +343,6 @@ h1 {
     border-radius: 15px;
     border-color: orange;
     background-color: orange;
-    margin-top: 5%;
     opacity: .85;
     color: whitesmoke;
     box-shadow: 
@@ -360,3 +357,5 @@ h1 {
 .nextButton:active {
     transform: translateY(4px);
 }
+
+
