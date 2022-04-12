@@ -17,7 +17,7 @@ After only a few weeks in my software enginnering bootcamp I developed and deplo
 HTML, CSS, Javascript, and jQuery
 
 ##### Getting Started:
-To play the game, please click on this link
+To play the game, please click on this link https://jeffreygreenjr.github.io/Project-1-Trivia/
 
 ##### Next Steps/Future Enhancements
 As far as future enhancements, I will circle back to this game as I deep dive further into the software engineering/web development space.
