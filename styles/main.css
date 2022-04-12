@@ -390,7 +390,7 @@ html {
     }
 
     .questionContainer {
-        padding: 25px 0;
+        padding: 1px 0;
     }
 
     .questionsBox {
@@ -399,8 +399,25 @@ html {
         font-size: 25px;
     }
 
+    .scoreboard {
+        padding: 0px;
+    }
+
+    .scoreContainer {
+        height: 40px;
+        width: 150px;
+        padding: 0px;
+    }
+
+    .strikeContainer {
+        height: 40px;
+        width: 150px;
+        padding: 0px;
+    }
+
     .answersContainer {
-        padding-bottom: 25px;
+        padding-top: 0px;
+        padding-bottom: 10px;
     }
 
     .optionsColumn1 {
