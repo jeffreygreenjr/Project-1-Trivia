@@ -255,9 +255,9 @@ console.log($playingScreens)
 
 $startButton.click(function() {
     i = 0;
-    score = 0;
+    // score = 10;
     $scoreNum.text('00');
-    strike = 0;
+    // strike = 10;
     $strikeNum.text('0');
     $homeScreen.hide()
     $restartButton.hide()
@@ -269,6 +269,10 @@ $startButton.click(function() {
     $body.css('background-image', 'url()')
     game = true;
 })
+
+// while (game) {
+//     triviaGame()
+// }
 
 // Game function containing event listeners for each answer choice
 
@@ -290,7 +294,7 @@ function triviaGame() {
                 strike++
                 $strikeNum.text(strike)
                 console.log(`Strike ${strike}`)
-                game = false;
+                gameOver();
             }
         })
         $optionB.click(function(e) {
@@ -311,6 +315,7 @@ function triviaGame() {
                 $strikeNum.text(strike)
                 console.log(`Strike ${strike}`)
                 game = false
+                gameOver();
             }
         })
         $optionC.click(function(e) {
@@ -321,7 +326,7 @@ function triviaGame() {
                 score++
                 $scoreNum.text(score)
                 console.log(`Your score is ${score}`)
-                // gameOver();
+                
             } else {
                 $optionC.css('background-color', 'crimson');
                 $optionC.css('box-shadow', '0 0 20px crimson, 0 0 30px crimson');
@@ -330,6 +335,7 @@ function triviaGame() {
                 strike++
                 $strikeNum.text(strike)
                 console.log(`Strike ${strike}`)
+                gameOver();
             }
         })
         $optionD.click(function(e) {
@@ -349,6 +355,7 @@ function triviaGame() {
                 strike++
                 $strikeNum.text(strike)
                 console.log(`Strike ${strike}`)
+                gameOver();
             }
         })
 }
@@ -357,22 +364,22 @@ function triviaGame() {
 
 function gameOver() {
     if (strike === 3) {
+        game = false;
+        $answersContainer.css('font-size', '50px');
         $answersContainer.text("THREE STRIKES, YOU'RE OUT!");
-        $answersContainer.css('color', 'whitesmoke')
-        $restartButton.show()
+        $answersContainer.css('color', 'whitesmoke');
+        $restartButton.show();
+        $nextButton.hide();
     }
 }
-
+console.log(strike)
 gameOver()
 
 // Button to move onto the next question
 
 $nextButton.click(function() {
     if (i < codingTriviaArr.length - 1) {
-        // console.log(i)
         i++;
-        // console.log(i)
-        // triviaGame(i);
         addContent();
         removeAnswerStyling();
         game = true;

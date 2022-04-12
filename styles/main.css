@@ -194,6 +194,7 @@ html {
     justify-content: center;
     align-items: center;
     align-content: space-between;
+    text-align: center;
     font-size: 125px;
     /* color: red; */
 }
