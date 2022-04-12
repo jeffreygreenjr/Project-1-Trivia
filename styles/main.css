@@ -125,29 +125,6 @@ html {
     margin: 0 12px;
 }
 
-/* #timeContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    font-size: 25px;
-    font-size: 25px;
-    height: 100px;
-    width: 150px;
-    padding: 10px;
-    border: solid;
-    border-radius: 15px;
-    background-color: aqua;
-    border-color: aqua;
-    color: whitesmoke;
-    margin-top: 3%;
-    box-shadow: 
-    0 0 20px aqua,
-    0 0 30px aqua;
-    opacity: .9;
-} */
-
 #scoreContainer {
     display: flex;
     justify-content: center;
@@ -202,7 +179,6 @@ html {
     align-content: space-between;
     text-align: center;
     font-size: 125px;
-    /* color: red; */
 }
 
 .optionsColumn1 {
@@ -458,7 +434,3 @@ html {
     .answersContainer {
         font-size: 75px;
     }
-
-
-
-
