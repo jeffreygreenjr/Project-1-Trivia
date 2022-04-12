@@ -43,7 +43,7 @@ html {
     align-content: center;
   }
 
-  .gameButton {
+  .startButton {
     display: flex;
     padding: 1%;
     margin-top: 700px;
@@ -59,7 +59,7 @@ html {
     opacity: .6;
 }
 
-.gameButton:hover {
+.startButton:hover {
         opacity: 1;
 }
 
@@ -194,7 +194,7 @@ html {
     justify-content: center;
     align-items: center;
     align-content: space-between;
-    font-size: 250px;
+    font-size: 125px;
     /* color: red; */
 }
 
@@ -361,4 +361,29 @@ html {
     transform: translateY(4px);
 }
 
+.restartButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    height: 75px;
+    width: 125px;
+    border: solid;
+    border-radius: 15px;
+    border-color: orange;
+    background-color: orange;
+    opacity: .85;
+    color: whitesmoke;
+    box-shadow: 
+    0 0 15px orange,
+    0 0 20px orange;
+}
 
+.restartButton:hover {
+    opacity: 1;
+}
+
+.restartButton:active {
+    transform: translateY(4px);
+}

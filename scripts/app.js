@@ -5,7 +5,7 @@
 let $body = $('.body')
 
 let $homeScreen = $('.homeScreen')
-let $gameButton = $('.gameButton')
+let $startButton = $('.startButton')
 
 let $playingScreens = $('.playingScreens')
 
@@ -20,6 +20,8 @@ let $optionColumn2 = $('.optionColumn2')
 let $optionC = $('.optionC')
 let $optionD = $('.optionD')
 let $nextButton = $('.nextButton')
+let $restartButton = $('.restartButton')
+let $theEnd = $('.theEnd')
 
 let $answers = $('.answers')
 let $codinganswers = $('#codinganswers')
@@ -36,11 +38,6 @@ let game = true;
 let clock = 1000
 let score = 0
 let strike = 0
-
-
-
-
-
 
 // Array of objects that store questions, answer options, and correct answer
 
@@ -70,6 +67,14 @@ let codingTriviaArr = [
         correctAnswer: "June 13th",
     },
     {
+        question: "How many phases of the moon are there?",
+        optionA: "Six",
+        optionB: "Eight",
+        optionC: "Ten",
+        optionD: "Twelve",
+        correctAnswer: "Eight",
+    },
+    {
         question: "Who won the world series in 2016?",
         optionA: "Chicago Cubs",
         optionB: "Cleveland Indians",
@@ -86,6 +91,30 @@ let codingTriviaArr = [
         correctAnswer: "The College Dropout",
     },
     {
+        question: "What is the biggest planet in the solar system?",
+        optionA: "Pluto",
+        optionB: "Saturn",
+        optionC: "Uranus",
+        optionD: "Jupiter",
+        correctAnswer: "Jupiter",
+    },
+    {
+        question: "What is the national animal of Scotland?",
+        optionA: "Sheep",
+        optionB: "Unicorn",
+        optionC: "Pony",
+        optionD: "Owl",
+        correctAnswer: "Unicorn",
+    },
+    {
+        question: "Which country owns every Panda in the world?",
+        optionA: "Vietnam",
+        optionB: "China",
+        optionC: "Australia",
+        optionD: "Indonesia",
+        correctAnswer: "China",
+    },
+    {
         question: "Who won the Stanley Cup in 2010, 2013, and 2015?",
         optionA: "Detroit Red Wings",
         optionB: "Pittsburg Penguins",
@@ -94,12 +123,60 @@ let codingTriviaArr = [
         correctAnswer: "Chicago Blackhawks",
     },
     {
+        question: "How many Grammys did Elvins win?",
+        optionA: "Three",
+        optionB: "Five",
+        optionC: "Six",
+        optionD: "Seven",
+        correctAnswer: "Three",
+    },
+    {
+        question: "What is the name of Harry Potter's pet owl?",
+        optionA: "Buckbeak",
+        optionB: "Hedwig",
+        optionC: "Hagrid",
+        optionD: "Rubeus",
+        correctAnswer: "Hedwig",
+    },
+    {
+        question: "Which was the first country to use paper money?",
+        optionA: "Great Britian",
+        optionB: "Spain",
+        optionC: "Russia",
+        optionD: "China",
+        correctAnswer: "China",
+    },
+    {
+        question: "What animated series holds the record for total number of episodes?",
+        optionA: "Spongebob Squarepants",
+        optionB: "Bugs Bunny",
+        optionC: "The Simpsons",
+        optionD: "Tom & Jerry",
+        correctAnswer: "The Simpsons",
+    },
+    {
+        question: "In what year was the first-ever Wimbledon Championship held?",
+        optionA: "1877",
+        optionB: "1908",
+        optionC: "1922",
+        optionD: "1962",
+        correctAnswer: "1877",
+    },
+    {
         question: "Who won the NBA Championship from 1991-1993 and 1996-1998?",
         optionA: "Los Angeles Lakers",
         optionB: "Boston Celtics",
         optionC: "New York Knicks",
         optionD: "Chicago Bulls",
         correctAnswer: "Chicago Bulls",
+    },
+    {
+        question: "What famous US festival hosted over 350,000 fans in 1969?",
+        optionA: "Coachella",
+        optionB: "Woodstock",
+        optionC: "Lollapalooza",
+        optionD: "Harlem Cultural Festival",
+        correctAnswer: "Woodstock",
     },
     {
         question: "When was the first generation iPhone released?",
@@ -118,6 +195,22 @@ let codingTriviaArr = [
         correctAnswer: "1997",
     },
     {
+        question: "Which country produces the most coffee in the world?",
+        optionA: "Columbia",
+        optionB: "Spain",
+        optionC: "Guatemala",
+        optionD: "Brazil",
+        correctAnswer: "Brazil",
+    },
+    {
+        question: "What was the first state in the US?",
+        optionA: "Delaware",
+        optionB: "Massachusetts",
+        optionC: "Virginia",
+        optionD: "Connecticut",
+        correctAnswer: "Delaware",
+    },
+    {
         question: "Who is the youngest player to win the MVP in the NBA?",
         optionA: "Michael Jordan",
         optionB: "Lebron James",
@@ -133,24 +226,53 @@ let codingTriviaArr = [
         optionD: "Breckinridge, CO",
         correctAnswer: "Park City, UT",
     },
+    {
+        question: "What language has the most words?",
+        optionA: "Spanish",
+        optionB: "Chinese",
+        optionC: "English",
+        optionD: "Arabic",
+        correctAnswer: "English",
+    },
+    {
+        question: "About how many grapes go into one bottle of wine?",
+        optionA: "150",
+        optionB: "325",
+        optionC: "575",
+        optionD: "700",
+        correctAnswer: "700",
+    },
 ]
 
 let i = 0
 
+// Initial homescreen view
+
 $playingScreens.hide()
 console.log($playingScreens)
 
-$gameButton.click(function() {
+// Start button to laod into the playing screen
+
+$startButton.click(function() {
+    i = 0;
+    score = 0;
+    $scoreNum.text('00');
+    strike = 0;
+    $strikeNum.text('0');
     $homeScreen.hide()
+    $restartButton.hide()
     addContent()
     $playingScreens.show()
+    $nextButton.show()
+    $answersContainer.show()
     triviaGame()
     $body.css('background-image', 'url()')
     game = true;
 })
 
-function triviaGame() {
-    
+// Game function containing event listeners for each answer choice
+
+function triviaGame() {  
         $optionA.click(function(e) {
             if (e.target.innerText === codingTriviaArr[i].correctAnswer) {
                 $optionA.css('background-color', 'greenyellow');
@@ -231,16 +353,22 @@ function triviaGame() {
         })
 }
 
-// triviaGame()
+
 
 function gameOver() {
-    if (!game) {
-        return game = false
+    if (strike === 3) {
+        $answersContainer.text("THREE STRIKES, YOU'RE OUT!");
+        $answersContainer.css('color', 'whitesmoke')
+        $restartButton.show()
     }
 }
 
+gameOver()
+
+// Button to move onto the next question
+
 $nextButton.click(function() {
-    if (i <= codingTriviaArr.length - 1) {
+    if (i < codingTriviaArr.length - 1) {
         // console.log(i)
         i++;
         // console.log(i)
@@ -250,14 +378,25 @@ $nextButton.click(function() {
         game = true;
     }
     else {
-        $answersContainer.text("THE END");
+        $answersContainer.text('THE END')
+        // $answersContainer.hide()
+        $answersContainer.css('color', 'whitesmoke')
+        $nextButton.hide()
+        $restartButton.show()
     }
 })
 
-// When the trivia reaches the end question, create an else statement after the if conditional,
-// else if (i === codingTriviaArr.length) {
-//     THE END
-// }
+// Button to restart the trivia game
+
+$restartButton.click(function() {
+    window.location.reload()
+    // $theEnd.text('')
+    // $playingScreens.hide();
+    // $homeScreen.show();
+    // $body.css('background-image', 'url(https://media1.giphy.com/media/q1hhYf1wo9ZOKPyoVw/giphy.gif?cid=ecf05e47rgflxkdtyf8dbw6ac2th95j9siwbp5b1yib9lg60&rid=giphy.gif&ct=g)')
+})
+
+// function to add the trivia questions and answers into the game
 
 function addContent() {
     $answersContainer.css('color', 'darkslategrey');
@@ -266,9 +405,10 @@ function addContent() {
     $optionB.text(codingTriviaArr[i].optionB)
     $optionC.text(codingTriviaArr[i].optionC)
     $optionD.text(codingTriviaArr[i].optionD)
+    // console.log($optionA)
 }
 
-
+// function to remove styling in response to the right or wrong answer choices
 
 function removeAnswerStyling() {
     $optionA.css('background-color', 'plum');
@@ -279,11 +419,7 @@ function removeAnswerStyling() {
     $optionC.css('box-shadow', '0 0 20px plum, 0 0 30px plum');
     $optionD.css('background-color', 'plum');
     $optionD.css('box-shadow', '0 0 20px plum, 0 0 30px plum');
-
-    // $answersContainer.text("STRIKE")
-    // $answersContainer.css('color', 're')
 }
-
 
 
 // ----------------------------------------------------------------
