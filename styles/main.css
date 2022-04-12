@@ -1,3 +1,7 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+
+
 html {
     box-sizing: border-box;
   }
@@ -46,17 +50,17 @@ html {
   .startButton {
     display: flex;
     padding: 1%;
-    margin-top: 700px;
+    margin-top: 710px;
     margin-left: 150px;
+    text-align: center;
     background-color: greenyellow; 
-    border-radius: 75%;
-    
+    border-radius: 65%;
     border: solid; 
     border-color: greenyellow;
     box-shadow: 
     0 0 20px greenyellow,
     0 0 25px greenyellow;
-    opacity: .6;
+    opacity: .7;
 }
 
 .startButton:hover {
@@ -65,10 +69,12 @@ html {
 
 .startGame {
     color: whitesmoke;
-    font-size: 35px;
+    font-family: 'Neonderthaw', 'cursive';
+    text-align: center;
+    font-size: 45px;
     text-shadow:
-    0 0 7px whitesmoke,
-    0 0 10px whitesmoke;
+    0 0 1px whitesmoke,
+    0 0 2px whitesmoke;
 }
 
 .playingScreens {
