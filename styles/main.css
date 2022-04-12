@@ -116,10 +116,10 @@ html {
 .scoreboard {
     display: flex;
     flex-direction: row;
-    margin: 0 40px;
+    margin: 0 12px;
 }
 
-#timeContainer {
+/* #timeContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,7 +140,7 @@ html {
     0 0 20px aqua,
     0 0 30px aqua;
     opacity: .9;
-}
+} */
 
 #scoreContainer {
     display: flex;
@@ -152,7 +152,7 @@ html {
     font-size: 25px;
     height: 100px;
     width: 150px;
-    padding: 10px;
+    padding: 5px;
     border: solid;
     border-radius: 15px;
     background-color: aqua;
@@ -175,7 +175,7 @@ html {
     font-size: 25px;
     height: 100px;
     width: 150px;
-    padding: 10px;
+    padding: 5px;
     border: solid;
     border-radius: 15px;
     background-color: aqua;
@@ -214,7 +214,7 @@ html {
     text-align: center;
     font-size: 30px;
     height: 150px;
-    width: 200px;
+    width: 250px;
     border: solid;
     border-radius: 15px;
     border-color: whitesmoke;
@@ -242,7 +242,7 @@ html {
     text-align: center;
     font-size: 30px;
     height: 150px;
-    width: 200px;
+    width: 250px;
     border: solid;
     border-radius: 15px;
     border-color: white;
@@ -277,7 +277,7 @@ html {
     text-align: center;
     font-size: 30px;
     height: 150px;
-    width: 200px;
+    width: 250px;
     border: solid;
     border-radius: 15px;
     border-color: white;
@@ -305,7 +305,7 @@ html {
     text-align: center;
     font-size: 30px;
     height: 150px;
-    width: 200px;
+    width: 250px;
     border: solid;
     border-radius: 15px;
     border-color: white;
@@ -388,3 +388,71 @@ html {
 .restartButton:active {
     transform: translateY(4px);
 }
+
+
+/* Mobile Version */
+
+@media only screen and (max-width: 600px) {
+
+    .body {
+        background-size: auto 50vh;
+    }
+
+    .startButton {
+        margin-top: 525px;
+        margin-left: 100px;
+    }
+
+    .startGame {
+        font-size: 20px;
+    }
+
+    .questionContainer {
+        padding: 25px 0;
+    }
+
+    .questionsBox {
+        height: 150px;
+        width: 350px;
+        font-size: 25px;
+    }
+
+    .answersContainer {
+        padding-bottom: 25px;
+    }
+
+    .optionsColumn1 {
+        padding-right: 15px;
+    }
+
+    .optionA {
+        height: 100px;
+        width: 150px;
+        font-size: 23px;
+    }
+
+    .optionB {
+        height: 100px;
+        width: 150px;
+        font-size: 23px;
+    }
+
+    .optionC {
+        height: 100px;
+        width: 150px;
+        font-size: 23px;
+    }
+
+    .optionD {
+        height: 100px;
+        width: 150px;
+        font-size: 23px;
+    }
+
+    .answersContainer {
+        font-size: 75px;
+    }
+
+
+
+
