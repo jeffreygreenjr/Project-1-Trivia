@@ -18,6 +18,7 @@ HTML, CSS, Javascript, and jQuery
 
 ##### Getting Started:
 To play the game, please click on this link https://jeffreygreenjr.github.io/Project-1-Trivia/
+You will be loaded into the home screen. From there, click the "start game" button to be taken into the playing screen where you will be prompted with 25 questions. After reading through each questions and making a selection in the multiple choice section, click on the "Next" button to move onto the next question. The rules of the game are simple. Three strikes (three wrong answers) and you're out. A perfect score (25 correct answers) will result in a "Win." 
 
 ##### Next Steps/Future Enhancements
 As far as future enhancements, I will circle back to this game as I deep dive further into the software engineering/web development space.
