@@ -261,6 +261,8 @@ $startButton.click(function() {
     game = true;
 })
 
+// Overall gameplay event listeners function
+
 function triviaGame() {  
     $optionA.click(function(e) {
         if (e.target.innerText === codingTriviaArr[i].correctAnswer) {
@@ -362,6 +364,7 @@ function gameOver() {
 gameOver()
 
 // Winning function
+
 function winner() {
     if (score === 25) {
         $answersContainer.css('font-size', '50px');
@@ -383,7 +386,8 @@ $nextButton.click(function() {
         game = true;
     }
     else {
-        $answersContainer.text('THE END')
+        $answersContainer.text('THE END. TRY AGAIN FOR A PERFECT SCORE!')
+        $answersContainer.css('font-size', '100px')
         $answersContainer.css('color', 'whitesmoke')
         $nextButton.hide()
         $restartButton.show()
